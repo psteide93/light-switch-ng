@@ -1,7 +1,7 @@
 # Light Switch (Angular Edition)
 
 ### Deployed Link
-
+https://charming-manatee-08b380.netlify.app/
 
 Create an Angular app that has the following:
 
