@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, Input } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-switch',
@@ -7,11 +7,9 @@ import { Component, Output, EventEmitter, Input } from '@angular/core';
 })
 export class SwitchComponent {
 
-  @Input() isLightOn!: boolean;
-
   @Output() onToggleLightSwitch = new EventEmitter<Event>();
 
-  toggleLightSwitch(isLightOn: boolean) {
+  toggleLightSwitch() {
     this.onToggleLightSwitch.emit();
   }
 }
