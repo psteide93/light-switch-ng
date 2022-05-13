@@ -6,9 +6,9 @@ import { Component} from '@angular/core';
   styleUrls: ['./night-light.component.css']
 })
 export class NightLightComponent {
-  isLightOn = true
+  isLightOn = false
 
-  lightSwitcher(isLightOn: boolean){
+  lightSwitcher(){
     if(this.isLightOn === false){
       this.isLightOn=true
     }else{
