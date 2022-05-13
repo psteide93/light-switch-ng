@@ -1,1 +1,4 @@
-<p>light works!</p>
+<p>The Light is:</p>
+<span *ngIf="isLightOn===true">ON</span>
+<span *ngIf="isLightOn===false">OFF</span>
+<div [class.off]="isLightOn===false"></div>

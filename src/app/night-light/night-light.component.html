@@ -1,3 +1,9 @@
+<div class="container">
 <h1>Night Light</h1>
-<app-light></app-light>
-<app-switch></app-switch>
+<app-switch
+  [isLightOn]="isLightOn"
+  (onToggleLightSwitch)="lightSwitcher(isLightOn)"
+>
+</app-switch>
+<app-light [isLightOn]="isLightOn"> </app-light>
+</div>
