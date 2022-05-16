@@ -1,19 +1,18 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { LightSwitchServiceService } from '../services/light-switch-service.service';
 
 @Component({
   selector: 'app-night-light',
   templateUrl: './night-light.component.html',
-  styleUrls: ['./night-light.component.css']
+  styleUrls: ['./night-light.component.css'],
 })
 export class NightLightComponent {
-  isLightOn = false
+  constructor(private lightSwitchService: LightSwitchServiceService) {}
 
-  lightSwitcher(){
-    if(this.isLightOn === false){
-      this.isLightOn=true
-    }else{
-      this.isLightOn=false
-    }
+  isLightOn = this.lightSwitchService.isLightOn;
+
+  toggleLight() {
+    this.lightSwitchService.lightSwitcher();
+    this.isLightOn = this.lightSwitchService.isLightOn;
   }
-
 }
